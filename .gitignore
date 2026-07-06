@@ -1,4 +1,86 @@
+# ====================================================================
+# OS & System Files
+# ====================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
 
+# ====================================================================
+# IDEs & Editors
+# ====================================================================
+# Visual Studio
+.vs/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+*.userprefs
 
-#Ignore vscode AI rules
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+
+# JetBrains (Rider, Resharper)
+.idea/
+*.sln.iml
+*.suo
+*.user
+
+# Qodo / Codi (if any cached files exist)
+.qodo/
+
+# ====================================================================
+# .NET / C# Build and Output
+# ====================================================================
+# Build folders
+[Bb]in/
+[Ob]j/
+[Log]s/
+
+# MSBuild / dotnet temporary and cache files
+*.pyc
+*.class
+*.exe
+*.dll
+*.pdb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Publish output
+*publish/
+
+# ====================================================================
+# Packages & Dependencies
+# ====================================================================
+# NuGet packages
+*.nupkg
+# The packages folder can be ignored as they are restored automatically
+**/packages/*
+!**/packages/repositories.config
+**/Paket.Restore.targets
+
+# ====================================================================
+# Custom rules for this project
+# ====================================================================
+# Ignore vscode AI rules
+.github/instructions/codacy.instructions.md
 .github\instructions\codacy.instructions.md
