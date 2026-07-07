@@ -29,7 +29,7 @@ public class Class1
 		var same = new Dictionary<char, int>();
 
 		foreach (char c in s)
-			same[c] = same.GetValueOrDefaults(c, 0) + 1;
+			same[c] = same.GetValueOrDefault(c, 0) + 1;
 
 		foreach (char c in t)
 		{
@@ -40,6 +40,21 @@ public class Class1
 		}
 
 		return true;
+	}
+
+	public bool isAnagram2(string s, string t)
+	{
+		if(s.Length != t.Length) return false;
+
+
+		var seen = new int[26];
+		for(int i = 0; i < s.Length; i++)
+		{
+			count[s[i] - 'a']++;
+			count[t[i] - 'a']--;
+		}
+
+		return count.All(x => x == 0);
 	}
 
 
