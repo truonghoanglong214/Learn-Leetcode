@@ -27,5 +27,38 @@ public class Class1
     {
         var seen = new Dictionary<string, List<string>>();
 
+        foreach(string  str in strs)
+        {
+            char[] c = str.ToCharArray();
+            Array.Sort(c);
+            string key = new string(c);
+
+            if (!seen.ContainsKey(key))
+                seen[key] = new List<string>();
+
+            seen[key].Add(str);
+        }
+
+        return new List<IList<string>>(seen.Values);
+    }
+
+    public IList<IList<string>> GroupAnagramsV2(string[] strs)
+    {
+        var seen = new Dictionary<string, List<string>>();
+
+        foreach (string str in strs)
+        {
+            int[] count = new int[26];
+            foreach (char c in str) count[c - "a"]++;
+
+            string key = string.Join("#", count);
+
+            if (!seen.ContainsKey(key))
+                seen[key] = new List<string>();
+
+            seen[key].Add(str);
+        }
+
+        return new List<IList<string>>(seen.Values);
     }
 }
